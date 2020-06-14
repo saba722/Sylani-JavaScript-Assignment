@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Assignment</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="Legal&IllegalNames.js"></script>
+</head>
+
+<body>
+    <h1>JavaScript Assignment</h1>
+
+    <h2>VARIABLE NAMES LEGAL & ILLEGAL </h2>
+
+    <p>Task # 3</p>
+    <h3 id="heading">Replaceable content!</h3>
+    <p id="contentLine1">Replaceable content!</p>
+    <p id="contentLine2">Replaceable content!</p>
+    <p id="contentLine3">Replaceable content!</p>
+    <p id="contentLine4">Replaceable content!</p>
+
+
+
+    <script>
+        var var1 = "numbers", var2 = "$", var3 = "_", var4 = "letter", var5 = "' , '";
+        var label1 = "sensitive", label2 = "keyboards";
+        document.getElementById("heading").innerHTML = "Rules for naming JS variables";
+        document.getElementById("contentLine1").innerHTML = "Variable names can only contain " + var5 + ", " + var1 + ", " + var2 + ", " + var3 + ". For example: $my_1stVariable.";
+        document.getElementById("contentLine2").innerHTML = "Variables must begin with a " + var4 + ", " + var2 + " or " + var3 + ". For example: $name, _name or name.";
+        document.getElementById("contentLine3").innerHTML = "Variable names are case " + label1;
+        document.getElementById("contentLine4").innerHTML = "Variable names should not be JS " + label2;
+    </script>
+
+
+    <br>
+    <br>
+    <a href="MathExpressions.html">Continue to next chapter >></a>
+</body>
+
+</html>
