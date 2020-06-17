@@ -11,10 +11,194 @@
     <h1>JavaScript Assignment</h1>
 
     <h2>MATH EXPRESSIONS: UNFAMILIAR OPERATORS</h2>
+    <p><ins>Task # 1</ins></p>
+    <p>Result:</p>
+    <p id="declared_value"></p>
+    <br>
+    <p>--------------------------</p>
+    <br>
+    <p id="pre_increment_value"></p>
+    <p id="incremented_value"></p>
+    <br>
+    <p>--------------------------</p>
+    <br>
+    <p id="post_increment_value"></p>
+    <p id="incremented_value_now"></p>
+    <br>
+    <p>--------------------------</p>
+    <br>
+    <p id="pre_decrement_value"></p>
+    <p id="decremented_value"></p>
+    <br>
+    <p>--------------------------</p>
+    <br>
+    <p id="post_decrement_value"></p>
+    <p id="decremented_value_now"></p>
+
+    <br>
+    <br>
+    <br>
+
+    <p><ins>Task # 2</ins></p>
+    <br>
+    <p>Result:</p>
+    <br>
+    <p id="a_value"></p>
+    <p id="b_value"></p>
+    <p id="result_value"></p>
+    <p><ins>Step by step Guide:</ins></p>
+    <p id="first_step"></p>
+    <p id="second_step"></p>
+    <p id="third_step"></p>
+    <p id="fourth_step"></p>
+
+    <br>
+    <br>
+    <br>
+
+    <p><ins>Task # 3</ins></p>
+    <p id="greetings"></p>
+
+    <br>
+    <br>
+    <br>
+
+    <p><ins>Task # 4</ins></p>
+    <p id="desired_table"></p>
+
+    <br>
+    <br>
+    <br>
+
+    <p><ins>Task # 5</ins></p>
+    <table>
+        <tr>
+            <th>Subject</th>
+            <th>Total Marks</th>
+            <th>Obtained Marks</th>
+            <th>Percentage</th>
+        </tr>
+        <tr>
+            <td id="first_subject_name"></td>
+            <td id="first_total_marks"></td>
+            <td id="first_obtained_marks"></td>
+            <td id="first_percent"></td>
+        </tr>
+        <tr>
+            <td id="second_subject_name"></td>
+            <td id="second_total_marks"></td>
+            <td id="second_obtained_marks"></td>
+            <td id="second_percent"></td>
+        </tr>
+        <tr>
+            <td id="third_subject_name"></td>
+            <td id="third_total_marks"></td>
+            <td id="third_obtained_marks"></td>
+            <td id="third_percent"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td id="total_marks_sum"><b></b></td>
+            <td id="obtained_marks_sum"><b></b></td>
+            <td id="total_percent"><b></b></td>
+        </tr>
+    </table>
+
+
+
+
+
+    <script>
+
+        // Task # 1
+        var a = 10;
+        document.getElementById("declared_value").innerHTML = "The value of 'a' is: " + a;
+        document.getElementById("pre_increment_value").innerHTML = "The value of '++a' is: " + ++a;
+        document.getElementById("incremented_value").innerHTML = "Now the value of 'a' is: " + a;
+        document.getElementById("post_increment_value").innerHTML = "The value of 'a++' is: " + a++;
+        document.getElementById("incremented_value_now").innerHTML = "Now the value of 'a' is: " + a;
+        document.getElementById("pre_decrement_value").innerHTML = "The value of '--a' is: " + --a;
+        document.getElementById("decremented_value").innerHTML = "Now the value of 'a' is: " + a;
+        document.getElementById("post_decrement_value").innerHTML = "The value of 'a--' is: " + a--;
+        document.getElementById("decremented_value_now").innerHTML = "Now the value of 'a' is: " + a;
+
+
+
+        // Task # 2
+        var a = 2,b = 1;
+        var test1 = 2, test2 = 1;
+        document.getElementById("a_value").innerHTML = "a is: " + a;
+        document.getElementById("b_value").innerHTML = "b is: " + b;
+        var result1 = --test1;
+        document.getElementById("first_step").innerHTML = "--a is: " + result1;
+        var result2 = result1 - --test2;
+        document.getElementById("second_step").innerHTML = "--a - --b is: " + result2;
+        var result3 = result1 + ++test2;
+        document.getElementById("third_step").innerHTML = "--a - --b + ++b is: " + result3;
+        var result4 = result2 + test2--;
+        document.getElementById("fourth_step").innerHTML = "--a - --b + ++b + b-- is: " + result4;
+        document.getElementById("result_value").innerHTML = "Result is: " + result4;
+
+
+
+        // Task # 3
+        var user_input = prompt("Task # 3 \nEnter your name!", "Visitor!")
+        document.getElementById("greetings").innerHTML = "Greetings! \nWelcome to my page " + user_input + "!";
+
+
+
+        // Task # 4
+        var table_number = parseInt(prompt("Task # 4 \nPlease enter table number you want to display!", 5));
+        var table = "";
+        for(var i = 1; i<= 10; i++){
+            table = table + (table_number + " x " + i + " = " + table_number*i + "<br>");
+        }
+        document.getElementById("desired_table").innerHTML = table;
+
+
+
+        // Task # 5
+        var first_subject = prompt("Task # 5 \nEnter first subject name: ");
+        var second_subject = prompt("Task # 5 \nEnter second subject name: ");
+        var third_subject = prompt("Task # 5 \nEnter third subject name: ");
+        var total_marks = 100;
+        var first_obtained_marks = parseInt(prompt("Task # 5 \nEnter Obtained marks for " + first_subject + " Subject:"));
+        var second_obtained_marks = parseInt(prompt("Task # 5 \nEnter Obtained marks for " + second_subject + " Subject:"));
+        var third_obtained_marks = parseInt(prompt("Task # 5 \nEnter Obtained marks for " + third_subject + " Subject:"));
+        var first_percent = Math.round((first_obtained_marks / total_marks) * 100);
+        var second_percent = Math.round((second_obtained_marks / total_marks) * 100);
+        var third_percent = Math.round((third_obtained_marks / total_marks) * 100);
+        var total_marks_sum = total_marks + total_marks + total_marks;
+        var obtained_marks_sum = first_obtained_marks + second_obtained_marks + third_obtained_marks;
+        var total_percent = Math.round((obtained_marks_sum / total_marks_sum) * 100);
+
+        document.getElementById("first_subject_name").innerHTML = first_subject;
+        document.getElementById("second_subject_name").innerHTML = second_subject;
+        document.getElementById("third_subject_name").innerHTML = third_subject;
+        document.getElementById("first_total_marks").innerHTML = total_marks;
+        document.getElementById("second_total_marks").innerHTML = total_marks;
+        document.getElementById("third_total_marks").innerHTML = total_marks;
+        document.getElementById("first_obtained_marks").innerHTML = first_obtained_marks;
+        document.getElementById("second_obtained_marks").innerHTML = second_obtained_marks;
+        document.getElementById("third_obtained_marks").innerHTML = third_obtained_marks;
+        document.getElementById("first_percent").innerHTML = first_percent + "%";
+        document.getElementById("second_percent").innerHTML = second_percent + "%";
+        document.getElementById("third_percent").innerHTML = third_percent + "%";
+        document.getElementById("total_marks_sum").innerHTML = total_marks_sum;
+        document.getElementById("obtained_marks_sum").innerHTML = obtained_marks_sum;
+        document.getElementById("total_percent").innerHTML = total_percent + "%";
+        
+
+
+
+
+
+    </script>
+
 
 
     <br>
     <br>
-    <a href="">Continue to next chapter >></a>
+    <a href="conditional_statements.html">Continue to next chapter >></a>
 </body>
 </html>

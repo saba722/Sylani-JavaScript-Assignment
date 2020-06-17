@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Assignment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>JavaScript Assignment</h1>
+
+    <h2>USER INPUT & CONDITIONAL STATEMENT</h2>
+    <p><ins>Task # 6</ins></p>
+    <h3>Marks Sheet!</h3>
+    <p id="total_marks"></p>
+    <p id="marks_obtained"></p>
+    <p id="percent"></p>
+    <p id="grade"></p>
+    <p id="remarks"><ins></ins></p>
+
+    <br>
+    <br>
+    <br>
+
+
+
+
+
+
+
+
+
+    <script>
+
+        // Task # 1
+        var city = prompt("Task # 1 \nEnter city name!");
+        if (city === "Karachi" || city === "karachi") {
+            alert("Task # 1 \nWelcome to city of lights!");
+            //document.getElementById("city").innerHTML = "Welcome to city of lights!";
+        }
+        else
+        {
+            alert("You enterd city name other than Karachi!")
+        }
+
+
+
+        // Task # 2
+        var gender = prompt("Task # 2 \nEnter your gender!")
+        if (gender === "Male" || gender === "male") {
+            alert("Task # 2 \nGood Morning Sir!");
+            //document.getElementById("gender").innerHTML = "Good Morning Sir!"
+        }
+        else if (gender === "Female" || gender === "female") {
+            alert("Task # 2 \nGood Morning Ma'am!");
+            //document.getElementById("gender").innerHTML = "Good Morning Ma'am!"
+        }
+        else {
+            alert("Task # 2 \nPlease enter valid input!");
+            //document.getElementById("gender").innerHTML = "Please enter valid input!"
+        }
+
+
+
+        // Task # 3
+        var trafic_light_color = prompt("Task # 3 \nPlease enter traffic light color!");
+        if (trafic_light_color === "Red" || trafic_light_color === "red") {
+            alert("Task # 3 \nMust STOP!");
+            //document.getElementById("trafic_light_color").innerHTML = "Must STOP!";
+        }
+        else if (trafic_light_color === "Yellow" || trafic_light_color === "yellow") {
+            alert("Task # 3 \nREADY to Move!");
+            //document.getElementById("trafic_light_color").innerHTML = "READY to Move!";
+        }
+        else if (trafic_light_color === "Green" || trafic_light_color === "green") {
+            alert("Task # 3 \nMove NOW!");
+            //document.getElementById("trafic_light_color").innerHTML = "Move NOW!";
+        }
+        else {
+            alert("Task # 3 \nPlease enter valid color!");
+            //document.getElementById("trafic_light_color").innerHTML = "Please enter valid color!";
+        }
+
+
+
+        // Task # 4
+        var remaining_fuel = prompt("Task # 4 \nPlease enter remaing fuel in your car (in litres)!");
+        if (remaining_fuel < 0.25) {
+            alert("Task # 4 \nPlease refill the fuel in your car!");
+            //document.getElementById("remaining_fuel").innerHTML = "Please refill the fuel in your car!";
+        }
+        else {
+            alert("Task # 4 \nYou're good to go!");
+            //document.getElementById("remaining_fuel").innerHTML = "You're good to go!"
+        }
+
+
+
+        // Task # 5
+        var a = 4;
+        if (++a === 5) {
+            alert("Task # 5 \ngiven condition for variable a is true");
+        }
+        var b = 82;
+        if (b++ === 83) {
+            alert("Task # 5 \ngiven condition for variable b is true");
+        }
+        var c = 12;
+        if (c++ === 13) {
+            alert("Task # 5 \ncondition 1 is true");
+        }
+        if (c === 13) {
+            alert("Task # 5 \ncondition 2 is true");
+        }
+        if (++c < 14) {
+            alert("Task # 5 \ncondition 3 is true");
+        }
+        if (c === 14) {
+            alert("Task # 5 \ncondition 4 is true");
+        }
+        var materialCost = 20000;
+        var laborCost = 2000;
+        var totalCost = materialCost + laborCost;
+        if (totalCost === laborCost + materialCost) {
+            alert("Task # 5 \nThe cost equals");
+        }
+        if(true){
+            alert("Task # 5 \nTrue");
+        }
+        if (false) {
+            alert("Task # 5 \nFalse");
+        }
+        if("car" < "cat"){
+            alert("Task # 5 \ncar is smaller than cat");
+        }
+
+
+
+        // Task # 6
+        var first_total_marks = parseInt(prompt("Task # 6 \nEnter total marks of first Subject:"));
+        var first_obtained_marks = parseInt(prompt("Task # 6 \nEnter Obtained marks for first Subject:"));
+        var second_total_marks = parseInt(prompt("Task # 6 \nEnter total marks of second Subject:"));
+        var second_obtained_marks = parseInt(prompt("Task # 6 \nEnter Obtained marks for second Subject:"));
+        var third_total_marks = parseInt(prompt("Task # 6 \nEnter total marks of third Subject:"));
+        var third_obtained_marks = parseInt(prompt("Task # 6 \nEnter Obtained marks for third Subject:"));
+        var total_marks = first_total_marks + second_total_marks + third_total_marks;
+        var total_obtained = first_obtained_marks + second_obtained_marks + third_obtained_marks;
+        var percent = Math.round((total_obtained / total_marks) * 100);
+        document.getElementById("total_marks").innerHTML = "Total Marks: " + total_marks;
+        document.getElementById("marks_obtained").innerHTML = "Marks Obtained: " + total_obtained;
+        document.getElementById("percent").innerHTML = "Percentage: " + percent + "%";
+        if(percent >= 80){
+            document.getElementById("grade").innerHTML = "Grade: A-one";
+            document.getElementById("remarks").innerHTML = "Remarks: Excellent";
+        }
+        else if(percent >= 70){
+            document.getElementById("grade").innerHTML = "Grade: A";
+            document.getElementById("remarks").innerHTML = "Remarks: Good";
+        }
+        else if(percent >= 60){
+            document.getElementById("grade").innerHTML = "Grade: B";
+            document.getElementById("remarks").innerHTML = "Remarks: You need to improve";
+        }
+        else
+        {
+            document.getElementById("grade").innerHTML = "Grade: Fail";
+            document.getElementById("remarks").innerHTML = "Remarks: Sorry";
+        }
+
+
+
+    </script>
+
+
+    <br>
+    <br>
+    <a href="conditional_statements.html">Continue to next chapter >></a>
+</body>
+
+</html>
