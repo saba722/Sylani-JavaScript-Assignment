@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Assignment</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <h1>JavaScript Assignment</h1>
 
@@ -16,8 +18,129 @@
 
 
 
+
+
+
+    <script>
+
+        // Task # 1
+        var letter_check = prompt("Enter any alphabet or digit! \nCheck its an uppercase letter, \nlowercase letter \nor a number!")
+        letter_code = letter_check.charCodeAt(0);
+        if (letter_code > 64 || letter_code < 91) {
+            alert("Task # 1 \nYou entered an Uppercase Alphabet!")
+        }
+        else if (letter_code > 96 || letter_code < 123) {
+            alert("Task # 1 \nYou entered a Lowercase Alphabet!")
+        }
+        else {
+            alert("Task # 1 \n You entered a number!")
+        }
+
+
+
+        // Task # 2
+        var first_int = parseInt(prompt("Task # 2 \nEnter first Integer! \nCheck which number is greater."));
+        var second_int = parseInt(prompt("Task # 2 \nEnter second Integer! \nCheck which number is greater."));
+        if (first_int > second_int) {
+            alert("Task # 2 \n" + first_int + " is greater than " + second_int);
+        }
+        else if (second_int > first_int) {
+            alert("Task # 2 \n" + second_int + " is greater than " + first_int);
+        }
+        else {
+            alert("Task # 2 \nBoth Intergers are Equal!")
+        }
+
+
+
+        // Task # 3
+        var num = parseInt(prompt("Enter an Integer!"));
+        if (num > 0) {
+            alert("Task # 3 \n" + num + " is a positive Integer!");
+        }
+        else if (num < 0) {
+            alert("Task # 3 \n" + num + " is a negative Integer!");
+        }
+        else {
+            alert("Task # 3 \nYou entered 0!")
+        }
+
+
+
+        // Task # 4
+        var alpha = prompt("Enter a letter!");
+        if (alpha === 'A' || alpha === 'a' || alpha === 'E' || alpha === 'e' || alpha === 'I' || alpha === 'i' || alpha === 'O' || alpha === 'o' || alpha === 'U' || alpha === 'u') {
+            alert("Task # 4 \n" + num + " is a Vowel!");
+        }
+        else {
+            alert("Task # 4 \n" + num + " is not a Vowel!")
+        }
+
+
+
+        // Task # 5
+        var user_password = prompt("Task # 5 \nPlease enter a Password!");
+        var confirm_password = prompt("Task # 5 \nConfirm Password!");
+        if (user_password.indexOf(' ') >= 0) {
+            user_password = prompt("Task # 5 \nPlease enter your Password!");
+        }
+        else if (user_password === confirm_password) {
+            alert("Task # 5 \nCorrect! The password you entered matches the original password.");
+        }
+        else {
+            alert("Task # 5 \nIncorrect password!")
+        }
+
+
+
+        // Task # 6
+        var greeting;
+        var hour = 13;
+        if (hour < 18) {
+            greeting = "Task # 6 \nGood day";
+            alert(greeting);
+        }
+        else{
+            greeting = "Task # 6 \nGood evening";
+            alert(greeting);
+        }  
+
+
+
+        // Task # 7
+        var time_conversion = parseInt(prompt("Task # 7 \nEnter time in 24 hours clock format. \nExample: 1900"));
+        if(time_conversion >= 0000 && time_conversion < 1200)
+        {
+            alert("Task # 7\nGood Morning!")
+        }
+        else if(time_conversion >= 1200 && time_conversion < 1700)
+        {
+            alert("Task # 7\nGood Afternoon!")
+        }
+        else if(time_conversion >= 1700 && time_conversion < 2100)
+        {
+            alert("Task # 7\nGood Evening!")
+        }
+        else if(time_conversion >= 2100 && time_conversion < 2359)
+        {
+            alert("Task # 7\nGood Night!")
+        }
+        else
+        {
+            alert("Task # 7 \nPlease enter proper format. \n Example: 0000")
+        }
+        
+
+
+
+    </script>
+
+
+
+
     <br>
     <br>
-    <a href="if_else.html">Continue to next chapter >></a>
+    <a href="array.html">Continue to next chapter >></a>
 </body>
+
 </html>
