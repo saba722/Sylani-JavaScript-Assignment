@@ -42,7 +42,7 @@
         }
         else
         {
-            alert("You enterd city name other than Karachi!")
+            alert("Task # 1 \nYou enterd city name other than Karachi!")
         }
 
 
@@ -167,6 +167,103 @@
         {
             document.getElementById("grade").innerHTML = "Grade: Fail";
             document.getElementById("remarks").innerHTML = "Remarks: Sorry";
+        }
+
+
+
+        // Task # 7
+        var secret_number = 6;
+        var get_secret_number = parseInt(prompt("Task # 7 \nGuess the secret number! /nHint: (1 to 10)"));
+        if(get_secret_number == secret_number)
+        {
+            alert("Task # 7 \nBingo! Correct answer.")
+        }
+        else if(get_secret_number + 1 == secret_number)
+        {
+            alert("Task # 7 \nClose enough to the correct answer!")
+        }
+        else
+        {
+            alert("Task # 7 \nWhoops! Wrong guess.")
+        }
+
+
+        // Task # 8
+        var divisible_of_3 = parseInt(prompt("Task # 8 \nEnter a number to check whether number is divisible by 3 or not!"));
+        if(divisible_of_3%3 == 0)
+        {
+            alert("Task # 8 \nYes, " + divisible_of_3 + "is divisible by 3!");
+        }
+        else
+        {
+            alert("Task # 8 \nNo, " + divisible_of_3 + "is not divisible by 3!");
+        }
+
+
+
+        // Task # 9
+        var even_or_odd = parseInt(prompt("Task # 9 \nEnter a number to check whether number is even or odd!"));
+        if(even_or_odd%2 == 0)
+        {
+            alert("Task # 9 \n" + even_or_odd + "is an Even Number!");
+        }
+        else
+        {
+            alert("Task # 9 \n" + even_or_odd + "is an Odd Number!");
+        }
+
+
+
+        // Task # 10
+        var temperature = parseInt(prompt("Task # 10 \nEnter Temperature!"));
+        if(temperature > 40)
+        {
+            alert("Task # 10 \nIt is too hot outside!");
+        }
+        else if(temperature > 30)
+        {
+            alert("Task # 10 \nThe Weather today is Normal!");
+        }
+        if(temperature > 20)
+        {
+            alert("Task # 10 \nToday’s Weather is cool!");
+        }
+        if(temperature > 10)
+        {
+            alert("Task # 10 \nOMG! Today’s weather is so Cool!");
+        }
+
+
+
+        // Task # 11
+        var first_number = parseInt(prompt("Task # 11 \nEnter first number!"));
+        var second_number = parseInt(prompt("Task # 11 \nEnter second number!"));
+        var operator = prompt("Task # 11 \nEnter operator! (+ , - , * , / , %)");
+        var result;
+        if(operator == '+')
+        {
+            result = first_number + second_number;
+            alert("Task # 11 /n Result: " + first_number + " + " + second_number + " = " + result);
+        }
+        else if(operator == '-')
+        {
+            result = first_number - second_number;
+            alert("Task # 11 /n Result: " + first_number + " - " + second_number + " = " + result);
+        }
+        else if(operator == '*')
+        {
+            result = first_number * second_number;
+            alert("Task # 11 /n Result: " + first_number + " * " + second_number + " = " + result);
+        }
+        else if(operator == '/')
+        {
+            result = first_number / second_number;
+            alert("Task # 11 /n Result: " + first_number + " / " + second_number + " = " + result);
+        }
+        else if(operator == '%')
+        {
+            result = first_number % second_number;
+            alert("Task # 11 /n Result: " + first_number + " % " + second_number + " = " + result);
         }
 
 
