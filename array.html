@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Assignment</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <h1>JavaScript Assignment</h1>
 
@@ -13,11 +15,179 @@
         <h2>ARRAYS</h2>
     </pre>
 
+    <p><ins>Task # 1</ins></p>
+    <p id="qualification"></p>
+
+
+
+    <p><ins>Task # 8</ins></p>
+    <p id="result"></p>
+
+
+
+    <p><ins>Task # 10</ins></p>
+    <p id="studScores"></p>
+    <p id="sortedScores"></p>
+
+
+
+    <p><ins>Task # 11</ins></p>
+    <p id="cities"></p>
+    <p id="selectedCities"></p>
+
+
+
+    <p><ins>Task # 12</ins></p>
+    <p id="arr"></p>
+    <p id="stringArr"></p>
 
 
 
 
 
+
+    <script>
+
+        // Task # 1
+        var studentLiteral = [];
+
+
+
+        // Task # 2
+        var studentObject = {};
+
+
+
+        // Task # 3
+        var stringArray = ["Saba", "Sana", "Saleha", "Sumaira"];
+
+
+
+        // Task # 4
+        var numberArray = [1, 2, 3, 4, 5, 6];
+
+
+
+        // Task # 5
+        var booleanArray = [true, false];
+
+
+
+        // Task # 6
+        var mixedArray = ["Saba", 5, true];
+
+
+
+        // Task # 7
+        var qualification = ["SSC", "HSC", "BSC", "BS", "BCOM", "MS", "M.Phil", "Phd"];
+        qualification.forEach(qualFunction);
+
+        function qualFunction(item, index) {
+            document.getElementById("qualification").innerHTML += index + 1 + ") " + item + "<br/>";
+        }
+
+
+
+        // Task # 8
+        var studName = ["Saba", "Sahar", "Saleha"];
+        var studMarks = [396, 488, 387];
+        for (i = 0; i <= studName.length - 1; i++) {
+            document.getElementById("result").innerHTML += "Score of " + studName[i] + " is " + studMarks[i] + ". Percentage: " + ((studMarks[i] / 500) * 100) + "%.<br/>";
+        }
+
+
+
+        // Task # 9
+        var colors = ["Orange", "Blue", "Red", "Yellow"];
+        var iterator = [], iterator2 = [], iterator3 = [], iterator4 = [], iterator5 = [], iterator6 = [], iterator7 = [], iterator8 = [];
+
+        for (var i = 0; i <= colors.length - 1; i++) {
+            iterator += colors[i] + "\n";
+        }
+        var userInput = prompt("Task # 9 \nFolowing is a sequence of colors. \n" + iterator + "\nWhich color do you want to display first?")
+        for (var i = 0; i <= colors.length - 1; i++) 
+        { 
+            if (colors[i] === userInput) 
+            { 
+                colors.splice(i, 1); 
+                colors.unshift(userInput);
+            }
+        }
+        for (var i = 0; i <= colors.length - 1; i++) {
+            iterator2 += colors[i] + "\n";
+        }
+        var userInput2 = prompt("Task # 9 \nFolowing is the new sequence of colors. \n" + iterator2 + "\nWhich color do you want to display last?")
+        for (var i = 0; i <= colors.length - 1; i++) 
+        { 
+            if (colors[i] === userInput2) 
+            { 
+                colors.splice(i, 1); 
+                colors.push(userInput2);
+            }
+        }
+        for (var i = 0; i <= colors.length - 1; i++) {
+            iterator4 += colors[i] + "\n";
+        }
+        alert("Task # 9 \nFolowing is the new sequence of colors. \nafter adding"+userInput2+" color to the end of the array.\n\n" + iterator4);
+        colors.unshift("Pink", "Green");
+        for (var i = 0; i <= colors.length - 1; i++) {
+            iterator3 += colors[i] + "\n";
+        }
+        alert("Task # 9 \nFolowing is the new sequence of colors. \nafter adding two new colors to the beginning of the array.\n\n" + iterator3);
+        colors.shift();
+        for (var i = 0; i <= colors.length - 1; i++) {
+            iterator5 += colors[i] + "\n";
+        }
+        alert("Task # 9 \nFolowing is the new sequence of colors. \nafter deleting first color from the beginning of the array.\n\n" + iterator5);
+        colors.pop();
+        for (var i = 0; i <= colors.length - 1; i++) {
+            iterator6 += colors[i] + "\n";
+        }
+        alert("Task # 9 \nFolowing is the new sequence of colors. \nafter deleting last color from the end of the array.\n\n" + iterator6);
+        var userIndex = parseInt(prompt("Task # 9 \nPlease enter an index at which you want to add a color\nHint: 0 - 3\n\n" + iterator6));
+        var usercolor = prompt("Task # 9 \nPlease enter a color which you want to add on ["+ userIndex +"] Index\nHint: 0 - 3\n\n" + iterator6);
+        colors.splice(userIndex, 0, usercolor);
+        for (var i = 0; i <= colors.length - 1; i++) {
+            iterator7 += colors[i] + "\n";
+        }
+        alert("Task # 9 \nFolowing is the new sequence of colors. \nafter adding desired color on desired index in the array.\n\n" + iterator7);
+        var userIndex1 = parseInt(prompt("Task # 9 \nPlease enter an index from which you want to delete color(s)\nHint: 0 - 4\n\n" + iterator7));
+        var usercolorNum = parseInt(prompt("Task # 9 \nPlease enter how many color(s) you want to delete from ["+ userIndex1 +"] Index\nHint: 0 - 4\n\n" + iterator7));
+        colors.splice(userIndex1, usercolorNum);
+        for (var i = 0; i <= colors.length - 1; i++) {
+            iterator8 += colors[i] + "\n";
+        }
+        alert("Task # 9 \nFolowing is the new sequence of colors. \nafter deleting desired number of color(s) from desired index in the array.\n\n" + iterator8);
+        
+
+
+        // Task # 10
+        var studScores = [25, 88, 56, 98, 84, 62, 73, 49];
+        document.getElementById("studScores").innerHTML = "Scores of Students: " + studScores;
+        var sortedScores = studScores.sort();
+        document.getElementById("sortedScores").innerHTML = "Ordered Scores of Students: " + sortedScores;
+
+
+
+        // Task # 11
+        var cities = ["Karachi", "Lahore", "Islamabad", "Quetta", "Peshawar"];
+        var selectedCities = cities.slice(1,4);
+        document.getElementById("cities").innerHTML = "Cities List: " + cities;
+        document.getElementById("selectedCities").innerHTML = "Selected cities List: " + selectedCities;
+
+
+
+        // Task # 12
+        var arr = ["This", "is", "my", "cat"];
+        var stringArr = arr.join(' ');
+        document.getElementById("arr").innerHTML = "Array: " + arr;
+        document.getElementById("stringArr").innerHTML = "String: " + stringArr;
+
+
+
+
+
+    </script>
 
 
 
@@ -25,4 +195,5 @@
     <br>
     <a href="array.html">Continue to next chapter >></a>
 </body>
+
 </html>
