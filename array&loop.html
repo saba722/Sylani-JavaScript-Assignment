@@ -1,59 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Assignment</title>
     <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
 </head>
+
 <body>
-    <h1>JavaScript Assignment</h1>
+    <div class="row top-header">
+        <div class="container">
+            <div class="row">
+                <h1>JavaScript Assignment</h1>
+            </div>
+        </div>
+    </div>
 
-    <pre>
-        <h2>ARRAYS AND LOOPS</h2>
-    </pre>
-
-
-
-    <p><ins>Task # 3</ins></p>
-    <p id="i"></p>
-
-
-
-    <p><ins>Task # 4</ins></p>
-    <p id="desired_table"></p>
+    <div class="main-div">
+        <pre>
+            <h2>ARRAYS AND LOOPS</h2>
+        </pre>
 
 
 
-    <p><ins>Task # 5</ins></p>
-    <p id="iterator"></p>
-    <p id="fruits"></p>
+        <p><ins>Task # 3</ins></p>
+        <p id="i"></p>
 
+        <br>
+        <br>
+        <br>
 
+        <p><ins>Task # 4</ins></p>
+        <p id="desired_table"></p>
 
-    <p><ins>Task # 6</ins></p>
-    <p id="counting"></p>
-    <p id="countingReverse"></p>
-    <p id="even"></p>
-    <p id="odd"></p>
-    <p id="series"></p>
+        <br>
+        <br>
+        <br>
 
+        <p><ins>Task # 5</ins></p>
+        <p id="iterator"></p>
+        <p id="fruits"></p>
 
+        <br>
+        <br>
+        <br>
 
-    <p><ins>Task # 8</ins></p>
-    <p id="largest"></p>
+        <p><ins>Task # 6</ins></p>
+        <p id="counting"></p>
+        <p id="countingReverse"></p>
+        <p id="even"></p>
+        <p id="odd"></p>
+        <p id="series"></p>
 
+        <br>
+        <br>
+        <br>
 
+        <p><ins>Task # 8</ins></p>
+        <p id="largest"></p>
 
-    <p><ins>Task # 9</ins></p>
-    <p id="smallest"></p>
+        <br>
+        <br>
+        <br>
 
+        <p><ins>Task # 9</ins></p>
+        <p id="smallest"></p>
 
+        <br>
+        <br>
+        <br>
 
-    <p><ins>Task # 10</ins></p>
-    <p id="multiple5"></p>
-
-
+        <p><ins>Task # 10</ins></p>
+        <p id="multiple5"></p>
+    </div>
 
 
 
@@ -70,8 +91,7 @@
 
 
         // Task # 3
-        for(var i =1; i<=10; i++)
-        {
+        for (var i = 1; i <= 10; i++) {
             document.getElementById("i").innerHTML += i + "<br />";
         }
 
@@ -81,8 +101,8 @@
         var table_number = parseInt(prompt("Task # 4 \nPlease enter the number of multiplication table you want to display!"));
         var table_length = parseInt(prompt("Task # 4 \nPlease enter length of multiplication table you want to display!"));
         var table = "";
-        for(var i = 1; i<= table_length; i++){
-            table = table + (table_number + " x " + i + " = " + table_number*i + "<br>");
+        for (var i = 1; i <= table_length; i++) {
+            table = table + (table_number + " x " + i + " = " + table_number * i + "<br>");
         }
         document.getElementById("desired_table").innerHTML = table;
 
@@ -91,50 +111,40 @@
         // Task # 5
         var fruits = ["apple", "banana", "mango", "orange", "strawberry"];
         var iterator = [];
-        for(var i = 0; i <= fruits.length - 1; i++)
-        {
+        for (var i = 0; i <= fruits.length - 1; i++) {
             document.getElementById("iterator").innerHTML += fruits[i] + "<br />";
         }
-        for(var i = 0; i <= fruits.length - 1; i++)
-        {
-            document.getElementById("fruits").innerHTML += "Element at index " + i + " is " + fruits[i] + "<br />"; 
+        for (var i = 0; i <= fruits.length - 1; i++) {
+            document.getElementById("fruits").innerHTML += "Element at index " + i + " is " + fruits[i] + "<br />";
         }
 
 
 
         // Task # 6
         var counting = [], countingReverse = [], even = [], odd = [], series = [];
-        for(var i = 1; i<=15; i++)
-        {
-            counting += i+", ";
+        for (var i = 1; i <= 15; i++) {
+            counting += i + ", ";
         }
         document.getElementById("counting").innerHTML = "Counting: " + counting;
-        for(var i = 10; i>=1; i--)
-        {
-            countingReverse += i+", ";
+        for (var i = 10; i >= 1; i--) {
+            countingReverse += i + ", ";
         }
         document.getElementById("countingReverse").innerHTML = "Reverse counting: " + countingReverse;
-        for(var i = 0; i<=20; i++)
-        {
-            if(i%2 === 0)
-            {
-                even += i+", ";
+        for (var i = 0; i <= 20; i++) {
+            if (i % 2 === 0) {
+                even += i + ", ";
             }
         }
         document.getElementById("even").innerHTML = "Even:" + even;
-        for(var i = 1; i<=20; i++)
-        {
-            if(i%2 !== 0)
-            {
-                odd += i+", ";
+        for (var i = 1; i <= 20; i++) {
+            if (i % 2 !== 0) {
+                odd += i + ", ";
             }
         }
         document.getElementById("odd").innerHTML = "Odd: " + odd;
-        for(var i = 2; i<=20; i++)
-        {
-            if(i%2 === 0)
-            {
-                series += i+"k, ";
+        for (var i = 2; i <= 20; i++) {
+            if (i % 2 === 0) {
+                series += i + "k, ";
             }
         }
         document.getElementById("series").innerHTML = "Series: " + series;
@@ -144,24 +154,19 @@
         var flag = 0, ivalue;
         var bakeitems = ["cake", "apple pie", "cookie", "chips", "patties"];
         var userItem = prompt("Welcome to ABC Bakery! \nWhat do you want to order Sir/Ma'am?");
-        for(var i = 0; i<= bakeitems.length -1; i++)
-        {
-            if(userItem == bakeitems[i])
-            {
+        for (var i = 0; i <= bakeitems.length - 1; i++) {
+            if (userItem == bakeitems[i]) {
                 flag = 1;
                 ivalue = i;
             }
-            else
-            {
+            else {
                 flag = 0;
             }
         }
-        if(flag == 1)
-        {
+        if (flag == 1) {
             alert(userItem + "is available at index " + ivalue + " in our bakery! :)");
         }
-        else
-        {
+        else {
             alert("We are Sorry! :(\n" + userItem + " is not available in our bakery.");
         }
 
@@ -169,37 +174,31 @@
 
         // Task # 8
         var largestnum = [24, 53, 78, 91, 12], largest = largestnum[0];
-        for(var i=1; i<=largestnum.length -1; i++)
-        {
-            if(largestnum[i] > largestnum[i-1])
-            {
+        for (var i = 1; i <= largestnum.length - 1; i++) {
+            if (largestnum[i] > largestnum[i - 1]) {
                 largest = largestnum[i];
             }
         }
         document.getElementById("largest").innerHTML = "Array items: " + largestnum + "<br />The largest number is: " + largest;
-        
+
 
 
         // Task # 9
         var smallestnum = [24, 53, 78, 91, 12], smallest = smallestnum[0];
-        for(var i=1; i<=smallestnum.length -1; i++)
-        {
-            if(smallestnum[i] < smallestnum[i-1])
-            {
+        for (var i = 1; i <= smallestnum.length - 1; i++) {
+            if (smallestnum[i] < smallestnum[i - 1]) {
                 smallest = smallestnum[i];
             }
         }
         document.getElementById("smallest").innerHTML = "Array items: " + smallestnum + "<br />The smallest number is: " + smallest;
-        
+
 
 
         // Task # 10
         var iterator1 = [];
-        for(var i=1; i<=100; i++)
-        {
-            if(i%5==0)
-            {
-                iterator1 += i+", "
+        for (var i = 1; i <= 100; i++) {
+            if (i % 5 == 0) {
+                iterator1 += i + ", "
             }
         }
         document.getElementById("multiple5").innerHTML = iterator1;
@@ -207,4 +206,5 @@
     </script>
 
 </body>
+
 </html>

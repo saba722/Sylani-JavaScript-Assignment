@@ -6,28 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Assignment</title>
     <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
 </head>
 
 <body>
-    <h1>JavaScript Assignment</h1>
+    <div class="row top-header">
+        <div class="container">
+            <div class="row">
+                <h1>JavaScript Assignment</h1>
+            </div>
+        </div>
+    </div>
 
-    <h2>USER INPUT & CONDITIONAL STATEMENT</h2>
-    <p><ins>Task # 6</ins></p>
-    <h3>Marks Sheet!</h3>
-    <p id="total_marks"></p>
-    <p id="marks_obtained"></p>
-    <p id="percent"></p>
-    <p id="grade"></p>
-    <p id="remarks"><ins></ins></p>
-
-    <br>
-    <br>
-    <br>
+    <div class="main-div">
+        <h2>USER INPUT & CONDITIONAL STATEMENT</h2>
 
 
+        <p><ins>Task # 6</ins></p>
+        <h3>Marks Sheet!</h3>
+        <p id="total_marks"></p>
+        <p id="marks_obtained"></p>
+        <p id="percent"></p>
+        <p id="grade"></p>
+        <p id="remarks"><ins></ins></p>
 
-
-
+        <br>
+        <br>
+        <a href="if_else.html">Continue to next chapter >></a>
+    </div>
 
 
 
@@ -40,8 +46,7 @@
             alert("Task # 1 \nWelcome to city of lights!");
             //document.getElementById("city").innerHTML = "Welcome to city of lights!";
         }
-        else
-        {
+        else {
             alert("Task # 1 \nYou enterd city name other than Karachi!")
         }
 
@@ -126,13 +131,13 @@
         if (totalCost === laborCost + materialCost) {
             alert("Task # 5 \nThe cost equals");
         }
-        if(true){
+        if (true) {
             alert("Task # 5 \nTrue");
         }
         if (false) {
             alert("Task # 5 \nFalse");
         }
-        if("car" < "cat"){
+        if ("car" < "cat") {
             alert("Task # 5 \ncar is smaller than cat");
         }
 
@@ -151,20 +156,19 @@
         document.getElementById("total_marks").innerHTML = "Total Marks: " + total_marks;
         document.getElementById("marks_obtained").innerHTML = "Marks Obtained: " + total_obtained;
         document.getElementById("percent").innerHTML = "Percentage: " + percent + "%";
-        if(percent >= 80){
+        if (percent >= 80) {
             document.getElementById("grade").innerHTML = "Grade: A-one";
             document.getElementById("remarks").innerHTML = "Remarks: Excellent";
         }
-        else if(percent >= 70){
+        else if (percent >= 70) {
             document.getElementById("grade").innerHTML = "Grade: A";
             document.getElementById("remarks").innerHTML = "Remarks: Good";
         }
-        else if(percent >= 60){
+        else if (percent >= 60) {
             document.getElementById("grade").innerHTML = "Grade: B";
             document.getElementById("remarks").innerHTML = "Remarks: You need to improve";
         }
-        else
-        {
+        else {
             document.getElementById("grade").innerHTML = "Grade: Fail";
             document.getElementById("remarks").innerHTML = "Remarks: Sorry";
         }
@@ -174,28 +178,23 @@
         // Task # 7
         var secret_number = 6;
         var get_secret_number = parseInt(prompt("Task # 7 \nGuess the secret number! /nHint: (1 to 10)"));
-        if(get_secret_number == secret_number)
-        {
+        if (get_secret_number == secret_number) {
             alert("Task # 7 \nBingo! Correct answer.")
         }
-        else if(get_secret_number + 1 == secret_number)
-        {
+        else if (get_secret_number + 1 == secret_number) {
             alert("Task # 7 \nClose enough to the correct answer!")
         }
-        else
-        {
+        else {
             alert("Task # 7 \nWhoops! Wrong guess.")
         }
 
 
         // Task # 8
         var divisible_of_3 = parseInt(prompt("Task # 8 \nEnter a number to check whether number is divisible by 3 or not!"));
-        if(divisible_of_3%3 == 0)
-        {
+        if (divisible_of_3 % 3 == 0) {
             alert("Task # 8 \nYes, " + divisible_of_3 + " is divisible by 3!");
         }
-        else
-        {
+        else {
             alert("Task # 8 \nNo, " + divisible_of_3 + " is not divisible by 3!");
         }
 
@@ -203,12 +202,10 @@
 
         // Task # 9
         var even_or_odd = parseInt(prompt("Task # 9 \nEnter a number to check whether number is even or odd!"));
-        if(even_or_odd%2 == 0)
-        {
+        if (even_or_odd % 2 == 0) {
             alert("Task # 9 \n" + even_or_odd + " is an Even Number!");
         }
-        else
-        {
+        else {
             alert("Task # 9 \n" + even_or_odd + " is an Odd Number!");
         }
 
@@ -216,20 +213,16 @@
 
         // Task # 10
         var temperature = parseInt(prompt("Task # 10 \nEnter Temperature!"));
-        if(temperature > 40)
-        {
+        if (temperature > 40) {
             alert("Task # 10 \nIt is too hot outside!");
         }
-        else if(temperature > 30)
-        {
+        else if (temperature > 30) {
             alert("Task # 10 \nThe Weather today is Normal!");
         }
-        else if(temperature > 20)
-        {
+        else if (temperature > 20) {
             alert("Task # 10 \nToday’s Weather is cool!");
         }
-        else if(temperature > 10)
-        {
+        else if (temperature > 10) {
             alert("Task # 10 \nOMG! Today’s weather is so Cool!");
         }
 
@@ -240,28 +233,23 @@
         var second_number = parseInt(prompt("Task # 11 \nEnter second number!"));
         var operator = prompt("Task # 11 \nEnter operator! (+ , - , * , / , %)");
         var result;
-        if(operator == '+')
-        {
+        if (operator == '+') {
             result = first_number + second_number;
             alert("Task # 11 /n Result: " + first_number + " + " + second_number + " = " + result);
         }
-        else if(operator == '-')
-        {
+        else if (operator == '-') {
             result = first_number - second_number;
             alert("Task # 11 /n Result: " + first_number + " - " + second_number + " = " + result);
         }
-        else if(operator == '*')
-        {
+        else if (operator == '*') {
             result = first_number * second_number;
             alert("Task # 11 /n Result: " + first_number + " * " + second_number + " = " + result);
         }
-        else if(operator == '/')
-        {
+        else if (operator == '/') {
             result = first_number / second_number;
             alert("Task # 11 /n Result: " + first_number + " / " + second_number + " = " + result);
         }
-        else if(operator == '%')
-        {
+        else if (operator == '%') {
             result = first_number % second_number;
             alert("Task # 11 /n Result: " + first_number + " % " + second_number + " = " + result);
         }
@@ -270,10 +258,6 @@
 
     </script>
 
-
-    <br>
-    <br>
-    <a href="if_else.html">Continue to next chapter >></a>
 </body>
 
 </html>
