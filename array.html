@@ -43,6 +43,29 @@
 
 
 
+    <p><ins>Task # 13</ins></p>
+    <p id="arraybefore"></p>
+    <p id="out1"></p>
+    <p id="out2"></p>
+    <p id="out3"></p>
+    <p id="out4"></p>
+
+
+
+    <p><ins>Task # 14</ins></p>
+    <p id="beforearray"></p>
+    <p id="pop1"></p>
+    <p id="pop2"></p>
+    <p id="pop3"></p>
+    <p id="pop4"></p>
+
+
+
+    <p><ins>Task # 15</ins></p>
+    <select name="manufactures" id="manufactures"></select>
+
+
+
 
 
 
@@ -105,11 +128,9 @@
             iterator += colors[i] + "\n";
         }
         var userInput = prompt("Task # 9 \nFolowing is a sequence of colors. \n" + iterator + "\nWhich color do you want to display first?")
-        for (var i = 0; i <= colors.length - 1; i++) 
-        { 
-            if (colors[i] === userInput) 
-            { 
-                colors.splice(i, 1); 
+        for (var i = 0; i <= colors.length - 1; i++) {
+            if (colors[i] === userInput) {
+                colors.splice(i, 1);
                 colors.unshift(userInput);
             }
         }
@@ -117,18 +138,16 @@
             iterator2 += colors[i] + "\n";
         }
         var userInput2 = prompt("Task # 9 \nFolowing is the new sequence of colors. \n" + iterator2 + "\nWhich color do you want to display last?")
-        for (var i = 0; i <= colors.length - 1; i++) 
-        { 
-            if (colors[i] === userInput2) 
-            { 
-                colors.splice(i, 1); 
+        for (var i = 0; i <= colors.length - 1; i++) {
+            if (colors[i] === userInput2) {
+                colors.splice(i, 1);
                 colors.push(userInput2);
             }
         }
         for (var i = 0; i <= colors.length - 1; i++) {
             iterator4 += colors[i] + "\n";
         }
-        alert("Task # 9 \nFolowing is the new sequence of colors. \nafter adding"+userInput2+" color to the end of the array.\n\n" + iterator4);
+        alert("Task # 9 \nFolowing is the new sequence of colors. \nafter adding" + userInput2 + " color to the end of the array.\n\n" + iterator4);
         colors.unshift("Pink", "Green");
         for (var i = 0; i <= colors.length - 1; i++) {
             iterator3 += colors[i] + "\n";
@@ -145,20 +164,20 @@
         }
         alert("Task # 9 \nFolowing is the new sequence of colors. \nafter deleting last color from the end of the array.\n\n" + iterator6);
         var userIndex = parseInt(prompt("Task # 9 \nPlease enter an index at which you want to add a color\nHint: 0 - 3\n\n" + iterator6));
-        var usercolor = prompt("Task # 9 \nPlease enter a color which you want to add on ["+ userIndex +"] Index\nHint: 0 - 3\n\n" + iterator6);
+        var usercolor = prompt("Task # 9 \nPlease enter a color which you want to add on [" + userIndex + "] Index\nHint: 0 - 3\n\n" + iterator6);
         colors.splice(userIndex, 0, usercolor);
         for (var i = 0; i <= colors.length - 1; i++) {
             iterator7 += colors[i] + "\n";
         }
         alert("Task # 9 \nFolowing is the new sequence of colors. \nafter adding desired color on desired index in the array.\n\n" + iterator7);
         var userIndex1 = parseInt(prompt("Task # 9 \nPlease enter an index from which you want to delete color(s)\nHint: 0 - 4\n\n" + iterator7));
-        var usercolorNum = parseInt(prompt("Task # 9 \nPlease enter how many color(s) you want to delete from ["+ userIndex1 +"] Index\nHint: 0 - 4\n\n" + iterator7));
+        var usercolorNum = parseInt(prompt("Task # 9 \nPlease enter how many color(s) you want to delete from [" + userIndex1 + "] Index\nHint: 0 - 4\n\n" + iterator7));
         colors.splice(userIndex1, usercolorNum);
         for (var i = 0; i <= colors.length - 1; i++) {
             iterator8 += colors[i] + "\n";
         }
         alert("Task # 9 \nFolowing is the new sequence of colors. \nafter deleting desired number of color(s) from desired index in the array.\n\n" + iterator8);
-        
+
 
 
         // Task # 10
@@ -171,7 +190,7 @@
 
         // Task # 11
         var cities = ["Karachi", "Lahore", "Islamabad", "Quetta", "Peshawar"];
-        var selectedCities = cities.slice(1,4);
+        var selectedCities = cities.slice(1, 4);
         document.getElementById("cities").innerHTML = "Cities List: " + cities;
         document.getElementById("selectedCities").innerHTML = "Selected cities List: " + selectedCities;
 
@@ -185,6 +204,45 @@
 
 
 
+        // Task # 13
+        var devices = ["keyboard", "mouse", "printer", "monitor"];
+        document.getElementById("arraybefore").innerHTML = "Array before: <br />" + devices;
+        var out1 = devices.shift();
+        document.getElementById("out1").innerHTML = "Out: <br />" + out1 + "<br />Array after first out: <br />" + devices;
+        var out2 = devices.shift();
+        document.getElementById("out2").innerHTML = "Out: <br />" + out2 + "<br />Array after second out: <br />" + devices;
+        var out3 = devices.shift();
+        document.getElementById("out3").innerHTML = "Out: <br />" + out3 + "<br />Array after third out: <br />" + devices;
+        var out4 = devices.shift();
+        document.getElementById("out4").innerHTML = "Out: <br />" + out4 + "<br />Array after fourth out: <br />" + devices;
+
+
+
+        // Task # 14
+        var devicescopy = ["keyboard", "mouse", "printer", "monitor"];
+        document.getElementById("beforearray").innerHTML = "Array before: <br />" + devicescopy;
+        var pop1 = devicescopy.pop();
+        document.getElementById("pop1").innerHTML = "Out: <br />" + pop1 + "<br />Array after first out: <br />" + devicescopy;
+        var pop2 = devicescopy.pop();
+        document.getElementById("pop2").innerHTML = "Out: <br />" + pop2 + "<br />Array after second out: <br />" + devicescopy;
+        var pop3 = devicescopy.pop();
+        document.getElementById("pop3").innerHTML = "Out: <br />" + pop3 + "<br />Array after third out: <br />" + devicescopy;
+        var pop4 = devicescopy.pop();
+        document.getElementById("pop4").innerHTML = "Out: <br />" + pop4 + "<br />Array after fourth out: <br />" + devicescopy;
+
+
+
+        // Task # 15
+        var manufactures = ["Apple", "Samsung", "Motorola", "Nokia", "Sony", "Haier"];
+        var select = document.getElementById('manufactures');
+        for (manufacture in manufactures) {
+
+            select.add(new Option(manufactures[manufacture]));
+
+        };
+
+
+
 
 
     </script>
@@ -193,7 +251,7 @@
 
     <br>
     <br>
-    <a href="array.html">Continue to next chapter >></a>
+    <a href="array&loop.html">Continue to next chapter >></a>
 </body>
 
 </html>
