@@ -146,18 +146,8 @@
 
         // Task # 7
         var flag;
-        alert(flag);
         var bakeitems = ["cake", "apple pie", "cookie", "chips", "patties"];
         var userItem = prompt("Task # 7 \nWelcome to ABC Bakery! \nWhat do you want to order Sir/Ma'am?");
-        // for (var i = 0; i <= bakeitems.length - 1; i++) {
-        //     if (userItem == bakeitems[i]) {
-        //         flag = 1;
-        //         ivalue = i;
-        //     }
-        //     else {
-        //         flag = 0;
-        //     }
-        // }
         var flag = bakeitems.indexOf(userItem);
         if ((typeof flag !== 'undefined') && flag >= 0) {
             alert("Task # 7 \n" + userItem + "is available at index " + flag + " in our bakery! :)");
